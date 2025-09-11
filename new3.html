@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        body{
+            display: flex;
+        }
         .box{
             height: 200px;
             width: 200px;
@@ -12,14 +15,12 @@
             margin: 20px auto;
             background-color: yellow;
         }
-        @media(max-width:600px){
-            .box{
-                background-color: brown;
-            }
-        }
-        @media(max-width:400px){
+        @media(max-width:400px) and (max-width:600px){
             .box{
                 background-color: blueviolet;
+            }
+            body{
+                flex-direction: column;
             }
         }
 
@@ -27,6 +28,7 @@
 </head>
 <body>
     <div class="box">jai ho </div>
+    <div class="box">jai ho kya bole</div>
 
 </body>
 </html>
